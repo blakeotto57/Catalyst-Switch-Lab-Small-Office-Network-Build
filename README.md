@@ -8,4 +8,4 @@ The Hardware I used:
 - Claude/Google to troubleshoot commands
 
 I asked Claude to generate me a list of requirements for this Small Office Network Build and the attached link is what it generated for me to do. It covers Networking concepts like: VLANs, 802.1Q trunking, LACP EtherChannel, Rapid PVST+, SSH-only management, DHCP, syslog and config backups, and inter-VLAN routing.
-The file in the repository titled "Catalyst Switch Lab - Small Office Network Build Guide" is the guide Claude generated for me that I used to follow my procedure and completed requirements.
+The file in the repository titled "Three-Switch Office Network Lab Project Brief.docx" is the guide Claude generated for me that I used to follow my procedure and completed requirements.
