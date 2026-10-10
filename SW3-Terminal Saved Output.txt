@@ -1,0 +1,58 @@
+*Mar  1 00:12:56.428: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:12:58.457: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:00.491: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:02.520: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:04.549: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:06.578: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:08.610: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:10.641: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:12.670: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:14.697: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:16.731: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:18.760: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:20.789: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:22.820: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:24.847: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:26.881: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:28.910: %SPANTREE-2-RECV_1Q_NON_TRUNK: 
+Received 802.1Q BPDU on non trunk FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:30.944: %SPANTREE-2-RECV_PVID_ERR: 
+Received BPDU with inconsistent peer vlan id 900 on FastEthernet0/4 on vlan 1.
+*Mar  1 00:13:30.947: %SPANTREE-2-BLOCK_PVID_PEER: Blocking FastEthernet0/4 on vlan 900. 
+Inconsistent peer vlan.
+*Mar  1 00:13:30.950: %SPANTREE-2-BLOCK_PVID_LOCAL: Blocking FastEthernet0/4 on vlan 1. 
+Inconsistent local vlan.
+*Mar  1 00:14:02.525: %SYS-5-CONFIG_I: Configured from console by blake on console
+*Mar  1 00:14:04.213: %SPANTREE-2-UNBLOCK_CONSIST_PORT: Unblocking FastEthernet0/4 on vlan 900. 
+Port consistency restored.
+*Mar  1 00:14:04.216: %SPANTREE-2-UNBLOCK_CONSIST_PORT: Unblocking FastEthernet0/4 on vlan 1. 
+Port consistency restored.
+*Mar  1 00:50:38.099: %SYS-5-CONFIG_I: Configured from console by blake on console
+*Mar  1 01:06:06.167: %SYS-5-CONFIG_I: Configured from console by blake on console
+*Mar  1 01:13:44.077: %SYS-5-CONFIG_I: Configured from console by blake on console
+*Mar  1 01:14:52.127: %SYS-5-CONFIG_I: Configured from console by blake on console
+SW3#configure terminal                       
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW3(config)#ip dhcp snooping ?
+% Unrecognized command
+SW3(config)#ip dhcp snooping 
+                   ^
+% Invalid input detected at '^' marker.
+
+SW3(config)#end
