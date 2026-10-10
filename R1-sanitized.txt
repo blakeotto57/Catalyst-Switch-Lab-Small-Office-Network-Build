@@ -1,0 +1,402 @@
+! R1 running-config (sanitized for publication)
+! Credentials, password hashes and certificate data replaced with <removed>.
+!
+!
+! Last configuration change at 04:24:06 PST Sat Oct 10 2026 by blake
+! NVRAM config last updated at 04:24:09 PST Sat Oct 10 2026 by blake
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec localtime
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret <removed>
+!
+username <removed> secret <removed>
+no aaa new-model
+clock timezone PST -8
+system mtu routing 1500
+ip subnet-zero
+ip routing
+ip domain-name blakeotto.com
+no ip dhcp use vrf connected
+ip dhcp excluded-address 10.10.10.1 10.10.10.20
+!
+ip dhcp pool USERS
+   network 10.10.10.0 255.255.255.0
+   default-router 10.10.10.1
+   dns-server 8.8.8.8
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2643724672
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2643724672
+ revocation-check none
+ rsakeypair TP-self-signed-2643724672
+!
+!
+crypto pki certificate chain TP-self-signed-2643724672
+ certificate self-signed 01
+  <self-signed certificate data removed>
+  quit
+!
+!
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+spanning-tree vlan 10,20,90,99,900,999 priority 24576
+!
+vlan internal allocation policy ascending
+!
+ip tftp source-interface Vlan99
+ip ssh version 2
+!
+!
+interface Port-channel1
+ switchport access vlan 999
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 900
+ switchport trunk allowed vlan 10,20,99,900
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel2
+ switchport access vlan 999
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 900
+ switchport trunk allowed vlan 10,20,99,900
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface FastEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 900
+ switchport trunk allowed vlan 10,20,99,900
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/2
+ switchport access vlan 999
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 900
+ switchport trunk allowed vlan 10,20,99,900
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/3
+ switchport access vlan 999
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 900
+ switchport trunk allowed vlan 10,20,99,900
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 2 mode on
+!
+interface FastEthernet0/4
+ switchport access vlan 999
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 900
+ switchport trunk allowed vlan 10,20,99,900
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 2 mode on
+!
+interface FastEthernet0/5
+ no switchport
+ ip address 10.0.0.250 255.255.255.0
+ ip access-group LAB_BLOCK_HOME out
+!
+interface FastEthernet0/6
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/7
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/8
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/9
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/10
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/11
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/12
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/13
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/14
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/15
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/16
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/17
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/18
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/19
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/20
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/21
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/22
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/23
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/24
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/25
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/26
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/27
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/28
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/29
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/30
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/31
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/32
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/33
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/34
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/35
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/36
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/37
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/38
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/39
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/40
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/41
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/42
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/43
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/44
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/45
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/46
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/47
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/48
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet0/1
+ switchport access vlan 999
+ shutdown
+!
+interface GigabitEthernet0/2
+ switchport access vlan 999
+ shutdown
+!
+interface GigabitEthernet0/3
+ switchport access vlan 999
+ shutdown
+!
+interface GigabitEthernet0/4
+ switchport access vlan 999
+ shutdown
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan10
+ ip address 10.10.10.1 255.255.255.0
+!
+interface Vlan20
+ ip address 10.10.20.1 255.255.255.0
+!
+interface Vlan99
+ ip address 10.10.99.1 255.255.255.0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.0.0.1
+no ip http server
+no ip http secure-server
+!
+ip access-list extended LAB_BLOCK_HOME
+ deny   ip 10.10.10.0 0.0.0.255 10.0.0.0 0.0.0.255 log
+ deny   ip 10.10.20.0 0.0.0.255 10.0.0.0 0.0.0.255 log
+ deny   ip 10.10.99.0 0.0.0.255 10.0.0.0 0.0.0.255 log
+ permit ip any any
+!
+logging trap debugging
+logging source-interface Vlan99
+logging 10.10.20.10
+!
+control-plane
+!
+banner motd R1, property of Blake Otto
+!
+line con 0
+ exec-timeout 30 0
+ logging synchronous
+ login local
+line vty 0
+ exec-timeout 30 0
+ logging synchronous
+ login local
+ transport input ssh
+line vty 1 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+end
