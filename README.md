@@ -7,15 +7,14 @@ The hardware/resources I used:
 - Numerous ethernet cables
 - Claude/Google to troubleshoot commands
 
-Note: the "How this brief was created" paragraph in both brief documents is the original wording from before the build. It overstates what I did on my own; my conclusion describes how I actually used Claude.
-
 Order of Operations:
 1. I asked Claude to generate me a list of requirements for this Small Office Network Build and the attached link is what it generated for me to do. It covers Networking concepts like: VLANs, 802.1Q trunking, LACP EtherChannel, Rapid PVST+, SSH-only management, DHCP, syslog and config backups, and inter-VLAN routing.
 The file in the repository titled "Three-Switch Office Network Lab Project Brief.docx" is the guide Claude generated for me that I used to follow my procedure and completed requirements.
 
 2. I made a copy of the guide Claude created me called "Annotated Three-Switch Office Network Lab Project Brief.docx" where I made comments following the document of the commands I initially thought I would need to do and how they would accomplish the requirements the lab gave me. I did not test these commands but I did use Cisco Packet tracer alongside the process of annotating the document to just help me remember the syntax of certain commands to more accurately annotate commands.
 
-3. After I completed my annotated Claude guide. I created a Word document for taking photos and writing my thought process while completing each steps for documentation's sake titled "Documented Three-Switch Office Network Lab Project Brief.docx" which is a copy of "Annotated Three-Switch Office Network Lab Project Brief.docx" but I document with photos and thoughts (comments in red text) after attempting each step (the commented parts of text) I initially thought would satisfy the requirements for the lab. The final full document of my process and comments and overall messy process can be found at this link: https://docs.google.com/document/d/1J-7m-3fjUq2Cyw54fIl0UQsjUcPKMWEb/edit?usp=sharing&ouid=106332296600475574405&rtpof=true&sd=true
+3. After I completed my annotated Claude guide. I created a Word document for taking photos and writing my thought process while completing each steps for documentation's sake titled "Documented Three-Switch Office Network Lab Project Brief.docx" which is a copy of "Annotated Three-Switch Office Network Lab Project Brief.docx" but I document with photos and thoughts (comments in red text) after attempting each step (the commented parts of text) I initially thought would satisfy the requirements for the lab. The final full document of my process and comments and overall messy process can be found at this link: https://docs.google.com/document/d/1J-7m-3fjUq2Cyw54fIl0UQsjUcPKMWEb/edit?usp=sharing
+
 Note that this document isn't in this repository fully but I prompted Claude to analyze the document and section off parts of it to be more easily digestiable for end users, (i.e. Requirements-Verification.pdf, Validation-and-Failure-Testing.pdf, etc)
 
 4. After finishing the lab, I wrote a conclusion (conclusion.md) with my final thoughts on the process. Not every requirement was fully met: several were limited by the hardware, and requirement 10 was only partly met. The Requirements table below shows the status of each.
