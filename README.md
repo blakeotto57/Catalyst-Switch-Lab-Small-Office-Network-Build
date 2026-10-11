@@ -1,9 +1,9 @@
 # Catalyst-Switch-Lab-Small-Office-Network-Build
 I bought 3 Cisco Catalyst switches to gain experience with hands-on networking experience. I know the CLI from Cisco Packet tracer and have done numerous simulate labs via that program but I wanted to gain as much real-world experince and practice as I can to get a better feel of real-world applications of these networking concepts.
 The hardware/resources I used:
-- 1 Cisco Catalyst 2560 Series (Layer 2 Switch), (SW2), Version:
-- 1 Cisco Catalyst 3500 Series XL (Layer 2 Switch), (SW3), Version:
-- 1 Cisco Catalyst 3560G Series (Layer 3 Switch), (R1), Version: 
+- 1 Cisco Catalyst 2560 Series (Layer 2 Switch), (SW2), Version: WS-C3560-48TS
+- 1 Cisco Catalyst 3500 Series XL (Layer 2 Switch), (SW3), Version: 3560G-48
+- 1 Cisco Catalyst 3560G Series (Layer 3 Switch), (R1), Version: WS-C3548-XL
 - Numerous ethernet cables
 - Claude/Google to troubleshoot commands
 
@@ -27,7 +27,7 @@ Note that this document isn't in this repository fully but I prompted Claude to 
 | # | Requirement | Status |
 |---|---|---|
 | 1 | Clean baseline | Met |
-| 2 | Secure management | Met (SW3 has no SSH; remote access disabled) |
+| 2 | Secure management | Met with limitation (SW3 has no SSH; remote access disabled) |
 | 3 | Segmentation | Met |
 | 4 | Redundant core uplinks | Met with limitation (SW3 uplink is static, no LACP) |
 | 5 | Access cross-link | Met |
@@ -36,7 +36,7 @@ Note that this document isn't in this repository fully but I prompted Claude to 
 | 8 | DHCP | Met |
 | 9 | Logging and backups | Met |
 | 10 | Internet access | Partially met (no NAT on core, no static routes on ISP gateway) |
-| 11 | Access-layer security | Met on SW2; SW3 has no DHCP snooping |
+| 11 | Access-layer security | Partially Met on SW2; SW3 has no DHCP snooping | 
 
 
 ## Failure tests
@@ -44,10 +44,3 @@ Note that this document isn't in this repository fully but I prompted Claude to 
 8 of 9 tests passed, and test 8 passed in part. The ACL blocked lab-to-home traffic (hit counters and log messages are in the PDF), but the "internet still works" half couldn't be tested because lab hosts have no path to the internet (see requirement 10). The test laptop and the server VM shared one network adapter, so most tests pinged SW3's management IP (10.10.99.3) instead of the server. That traffic takes the same path through R1.
 
 Highlights: pulling one EtherChannel link caused no visible packet loss; losing both of SW2's uplinks failed over across the cross-link in about 36 seconds (9 timed-out pings at Windows' 4-second default), because SW3 runs 802.1D; moving the root bridge moved the blocked port exactly as the path costs predicted.
-
-## More
-
-- [Design decisions](design-decisions.md)
-- [Troubleshooting log](troubleshooting.md)
-- [Hardware limitations](limitations.md)
-- Sanitized configs: `R1-sanitized.txt`, `SW2-sanitized.txt`, `SW3-sanitized.txt`
