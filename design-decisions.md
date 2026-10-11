@@ -8,7 +8,7 @@ The project brief defined the requirements. These are the implementation choices
 
 **Native VLAN 900 and parking VLAN 999.** No hosts live in the native VLAN, so untagged traffic on a trunk can't land in a user or server network. Every unused port is in VLAN 999 and shut down, so plugging into a spare port gets you nothing.
 
-**Trunks are static and pruned.** Every trunk uses `switchport mode trunk` with `nonegotiate` (no DTP) and allows only 10, 20, 99 and 900.
+**Trunks are static and pruned.** Every trunk (except for SW3's due to hardware limitations) uses `switchport mode trunk` with `nonegotiate` (no DTP) and allows only 10, 20, 99 and 900.
 
 **LACP where possible, static where not.** SW2's uplink uses LACP (`mode active`) so mismatched bundles are detected. SW3's 3548 XL has no LACP, so its uplink is a static channel (`mode on` on R1, `port group` on SW3).
 
