@@ -8,7 +8,7 @@
 | 20 | SERVERS | 10.10.20.0/24 | 10.10.20.1 | Ubuntu server SRV1, static 10.10.20.10 (syslog + TFTP) |
 | 99 | MGMT | 10.10.99.0/24 | 10.10.99.1 | Switch management: R1 .1, SW2 .2, SW3 .3 |
 | 900 | NATIVE | — | — | Trunk native VLAN; carries no hosts |
-| 999 | PARKING | — | — | Every unused port, shut down |
+| 999 | UNUSED | — | — | Every unused port, shut down |
 | — | Uplink | 10.0.0.0/24 (home network) | Home router 10.0.0.1 | R1 Fa0/5 routed port, 10.0.0.250/24 |
 
 ## Devices
