@@ -17,7 +17,7 @@ The file in the repository titled "Three-Switch Office Network Lab Project Brief
 3. After I completed my annotated Claude guide. I created a Word document for taking photos and writing my thought process while completing each steps for documentation's sake titled "Documented Three-Switch Office Network Lab Project Brief.docx" which is a copy of "Annotated Three-Switch Office Network Lab Project Brief.docx" but I document with photos and thoughts (comments in red text) after attempting each step (the commented parts of text) I initially thought would satisfy the requirements for the lab. The final full document of my process and comments and overall messy process can be found at this link: https://docs.google.com/document/d/1s2t-YMH0AEi6pULD4k1bQ0-tn5BNO2qe/edit?usp=sharing&ouid=106332296600475574405&rtpof=true&sd=true
 Note that this document isn't in this repository fully but I prompted Claude to analyze the document and section off parts of it to be more easily digestiable for end users, (i.e. Requirements-Verification.pdf, Validation-and-Failure-Testing.pdf, etc)
 
-4. After I completed the lab and was able to meet all of the requirements in "Three-Switch Office Network Lab Project Brief.docx" I created a conclusion document based on my final thoughts and the overall process of starting, doing, and completing this lab, title conclusion.pdf
+4. After finishing the lab, I wrote a conclusion (conclusion.md) with my final thoughts on the process. Not every requirement was fully met: several were limited by the hardware, and requirement 10 was only partly met. The Requirements table below shows the status of each.
 
 
 
@@ -40,7 +40,9 @@ Note that this document isn't in this repository fully but I prompted Claude to 
 
 ## Failure tests
 
-All 9 passed. Highlights: an EtherChannel link failure lost no pings; losing both of SW2's uplinks failed over across the cross-link in ~40 s (SW3 runs 802.1D); moving the root bridge moved the blocked port exactly as path costs predicted. 
+8 of 9 tests passed, and test 8 passed in part. The ACL blocked lab-to-home traffic (hit counters and log messages are in the PDF), but the "internet still works" half couldn't be tested because lab hosts have no path to the internet (see requirement 10). The test laptop and the server VM shared one network adapter, so most tests pinged SW3's management IP (10.10.99.3) instead of the server. That traffic takes the same path through R1.
+
+Highlights: pulling one EtherChannel link caused no visible packet loss; losing both of SW2's uplinks failed over across the cross-link in about 36 seconds (9 timed-out pings at Windows' 4-second default), because SW3 runs 802.1D; moving the root bridge moved the blocked port exactly as the path costs predicted.
 
 ## More
 
