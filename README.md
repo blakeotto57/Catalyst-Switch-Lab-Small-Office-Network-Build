@@ -17,3 +17,33 @@ The file in the repository titled "Three-Switch Office Network Lab Project Brief
 3. After I completed my annotated Claude guide. I created a Word document for taking photos and writing my thought process while completing each steps for documentation's sake titled "Documented Three-Switch Office Network Lab Project Brief.docx" which is a copy of "Annotated Three-Switch Office Network Lab Project Brief.docx" but I document with photos and thoughts (comments in red text) after attempting each step (the commented parts of text) I initially thought would satisfy the requirements for the lab.
 
 4. After I completed the lab and was able to meet all of the requirements in "Three-Switch Office Network Lab Project Brief.docx" I created a conclusion document based on my final thoughts and the overall process of starting, doing, and completing this lab.
+
+
+
+## Requirements
+
+| # | Requirement | Status |
+|---|---|---|
+| 1 | Clean baseline | Met |
+| 2 | Secure management | Met (SW3 has no SSH; remote access disabled) |
+| 3 | Segmentation | Met |
+| 4 | Redundant core uplinks | Met with limitation (SW3 uplink is static, no LACP) |
+| 5 | Access cross-link | Met |
+| 6 | Spanning tree | Met with limitation (SW3 is 802.1D only) |
+| 7 | Centralized routing | Met |
+| 8 | DHCP | Met |
+| 9 | Logging and backups | Met |
+| 10 | Internet access | Partially met (no NAT on core, no static routes on ISP gateway) |
+| 11 | Access-layer security | Met on SW2; SW3 has no DHCP snooping |
+
+
+## Failure tests
+
+All 9 passed. Highlights: an EtherChannel link failure lost no pings; losing both of SW2's uplinks failed over across the cross-link in ~40 s (SW3 runs 802.1D); moving the root bridge moved the blocked port exactly as path costs predicted. 
+
+## More
+
+- [Design decisions](design-decisions.md)
+- [Troubleshooting log](troubleshooting.md)
+- [Hardware limitations](limitations.md)
+- Sanitized configs: `R1-sanitized.txt`, `SW2-sanitized.txt`, `SW3-sanitized.txt`
