@@ -32,4 +32,4 @@
 | Laptop | SW2 Gi0/3 | Access VLAN 10, PortFast, BPDU Guard, port security |
 | Server | SW3 Fa0/3 | Access VLAN 20, PortFast |
 
-All trunks: allowed VLANs 10, 20, 99, 900 · native VLAN 900 · `switchport nonegotiate`.
+All trunks: allowed VLANs 10, 20, 99, 900 · native VLAN 900 · `switchport nonegotiate`. except for SW3 as it had limitations 
