@@ -7,6 +7,7 @@ The hardware/resources I used:
 - Numerous ethernet cables
 - Claude/Google to troubleshoot commands
 
+Note: the "How this brief was created" paragraph in both brief documents is the original wording from before the build. It overstates what I did on my own; my conclusion describes how I actually used Claude.
 
 Order of Operations:
 1. I asked Claude to generate me a list of requirements for this Small Office Network Build and the attached link is what it generated for me to do. It covers Networking concepts like: VLANs, 802.1Q trunking, LACP EtherChannel, Rapid PVST+, SSH-only management, DHCP, syslog and config backups, and inter-VLAN routing.
