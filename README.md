@@ -40,6 +40,6 @@ Note that this document isn't in this repository fully but I prompted Claude to 
 
 ## Failure tests
 
-8 of 9 tests passed, and test 8 passed in part. The ACL blocked lab-to-home traffic (hit counters and log messages are in the PDF), but the "internet still works" half couldn't be tested because lab hosts have no path to the internet (see requirement 10). The test laptop and the server VM shared one network adapter, so most tests pinged SW3's management IP (10.10.99.3) instead of the server. That traffic takes the same path through R1.
+8 of 9 tests passed, and test 8 passed in part. The ACL blocked lab-to-home traffic (hit counters and log messages are in the PDF), but the "internet still works" half couldn't be tested because lab hosts have no path to the internet (see requirement 10). The test laptop and the server VM shared one network adapter, so all tests pinged SW3's management IP (10.10.99.3) instead of the server. That traffic takes the same path through R1.
 
 Highlights: pulling one EtherChannel link caused no visible packet loss; losing both of SW2's uplinks failed over across the cross-link in about 36 seconds (9 timed-out pings at Windows' 4-second default), because SW3 runs 802.1D; moving the root bridge moved the blocked port exactly as the path costs predicted.
