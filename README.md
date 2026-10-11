@@ -17,7 +17,7 @@ The file in the repository titled "Three-Switch Office Network Lab Project Brief
 3. After I completed my annotated Claude guide. I created a Word document for taking photos and writing my thought process while completing each steps for documentation's sake titled "Documented Three-Switch Office Network Lab Project Brief.docx" which is a copy of "Annotated Three-Switch Office Network Lab Project Brief.docx" but I document with photos and thoughts (comments in red text) after attempting each step (the commented parts of text) I initially thought would satisfy the requirements for the lab. The final full document of my process and comments and overall messy process can be found at this link: https://docs.google.com/document/d/1s2t-YMH0AEi6pULD4k1bQ0-tn5BNO2qe/edit?usp=sharing&ouid=106332296600475574405&rtpof=true&sd=true
 Note that this document isn't in this repository fully but I prompted Claude to analyze the document and section off parts of it to be more easily digestiable for end users, (i.e. Requirements-Verification.pdf, Validation-and-Failure-Testing.pdf, etc)
 
-4. After I completed the lab and was able to meet all of the requirements in "Three-Switch Office Network Lab Project Brief.docx" I created a conclusion document based on my final thoughts and the overall process of starting, doing, and completing this lab.
+4. After I completed the lab and was able to meet all of the requirements in "Three-Switch Office Network Lab Project Brief.docx" I created a conclusion document based on my final thoughts and the overall process of starting, doing, and completing this lab, title conclusion.pdf
 
 
 
